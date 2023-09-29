@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+
+  <form class="form">
+    <div class="img-md"></div>
+
+    <div class="pad-container">
+
+      <h2 class="title">Stay updated!</h2>
+      <p class="descrption">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="lists">
+        <div class="check-desc">
+          <img src="./assets/images/icon-list.svg" alt="list">
+          <p>Product discovery and building what matters</p>
+        </div>
+        <div class="check-desc">
+          <img src="./assets/images/icon-list.svg" alt="list">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class="check-desc">
+          <img src="./assets/images/icon-list.svg" alt="list">
+          <p>And much more!</p>
+        </div>
+      </div>
+  
+      <div class="inputs">
+        <div class="labels">
+          <p class="email-a">Email address</p>
+          <p class="email-i">Invalid Email</p>
+        </div>
+  
+        <input type="email" placeholder="email@company.com" class="email-input" required>
+      </div>
+  
+      <button class="submit">Subscribe to monthly newsletter</button>
+    </div>
+  </form>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <div class="successful">
+    <div class="container">
+      <img src="./assets/images/icon-success.svg" alt="success">
+      <h2 class="title-s">Thanks for subscribing!</h2>
+      <p class="desc-s">A confirmation email has been sent to <span class="mail">no email</span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </div>
+    
+    <button class="dismiss">Dismiss message</button>
+  </div>
+
+  <!-- Success message end -->
+
+  <!-- Made by RamssC -->
+  <script src="./main.js"></script>
+</body>
+</html>

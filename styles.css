@@ -1,0 +1,244 @@
+:root{
+    --tomato: #ff6257;
+    --darkSlateGrey: #242742;
+    --charcoalGrey: #36384e;
+    --grey: #9294a0;
+    --white: #ffffff;
+
+    --fontSize: 16px;
+    --fontFamily: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+    background-color: var(--darkSlateGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    background-color: var(--white);
+}
+
+form .pad-container{
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    color: var(--darkSlateGrey);
+}
+
+form .img-md{
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 10em;
+    border-radius: 0 0 0.8em 0.8em;
+    font-weight: 400;
+}
+
+form .pad-container .title{
+    color: var(--darkSlateGrey);
+    font-size: 2em;
+}
+
+form .pad-container .lists{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    margin-bottom: 1em;
+}
+
+form .pad-container .lists .check-desc{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.7em;
+    align-items: center;
+}
+
+form .pad-container .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    font-size: 0.8em;
+}
+
+form .pad-container .inputs .labels{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+form .pad-container .inputs .labels .email-a{
+    font-weight: 700;
+    color: var(--darkSlateGrey);
+}
+
+form .pad-container .inputs .labels .email-i{
+    color: var(--tomato);
+    font-weight: 700;
+    display: none;
+}
+
+form .pad-container .inputs input{
+    padding: 1.1em 1em;
+    font-size: 1em;
+    border-radius: 0.4em;
+    border: 1px solid var(--grey);
+    font-family: var(--fontFamily);
+    font-size: 1.05em;
+    outline-color: var(--charcoalGrey);
+    transition: 400ms all ease;
+}
+
+.error{
+    background-color: #fd746b;
+    color: #ff1100;
+    border: 1px solid var(--tomato);
+}
+
+form .pad-container .submit, .successful .dismiss{
+    font-size: 0.9em;
+    background: var(--darkSlateGrey);
+    color: var(--white);
+    border-radius: 0.4em;
+    padding: 1.1em 0;
+    border: none;
+    font-weight: 700;
+    transition: 300ms;
+}
+
+form .pad-container .submit:hover, .successful .dismiss:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff207d, #ff845e);
+    box-shadow: 0 5px 10px #ff207d;
+}
+
+.successful{
+    width: 100%;
+    background-color: var(--white);
+    padding: 2em 1.5em;
+    display: none;
+    flex-direction: column;
+    gap: 6.8em;
+    color: var(--darkSlateGrey);
+}
+
+.successful .container{
+    height: 22em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.2em;
+}
+
+.successful .container h2{
+    font-size: 2.5em;
+}
+
+.successful .container p{
+    color: var(--darkSlateGrey);
+}
+
+.successful .container .mail{
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 1115px) {
+    body{
+        height: 40.6em;
+    }
+
+    form{
+        width: 50em;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 1em;
+        font-size: calc(var(--fontSize) - 1px);
+    }
+    
+    .slideD{
+        animation: slideDown 0.7s linear;
+    }
+
+    form .pad-container{
+        padding: 3.5em 3em 3em 3em;
+    }
+
+    form .pad-container .title{
+        font-size: 3em;
+    }
+
+    form .img-md{
+        width: 52%;
+        background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+        height: 30em;
+        margin: 1.3em 1.3em 1.3em 0;
+    }
+
+    .successful{
+        display: none;
+        width: 25em;
+        border-radius: 1em;
+        gap: 2em;
+        padding: 2em 3em;
+        font-size: calc(var(--fontSize) - 1px);
+    }
+
+    .pops{
+        animation:popup 0.7s linear;
+    }
+
+    .successful .container{
+        height: auto;
+        gap: 1.5em;
+    }
+
+    .successful .container img{
+        width: 3.5em;
+    }
+
+    .successful .container p{
+        font-size: calc(var(--fontSize) - 2px);
+        line-height: 1.4em;
+    }
+
+    @keyframes slideDown{
+        60%{
+            opacity: 0;
+        }
+
+        100%{
+            transform: translateY(3em);
+            opacity: 0;
+        }
+    }
+
+    @keyframes popup {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+            display: none;
+        }
+
+        10%{
+            display: flex;
+        }
+
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
